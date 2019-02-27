@@ -24,23 +24,22 @@ $ban="  ________ ___  ___________  ____    __ _
                                             	$ch=curl_init();
                                             	curl_setopt($ch, CURLOPT_URL,"http://bnerr.com/api/sms.php?send=1&no=$target&msg=$pesan&sender=LOLZ");
                                             	curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-												curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-												curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
-												curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
-												curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
-												curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
-												$server_output = curl_exec ($ch);
-												curl_close ($ch);
-												
-												$server_output = json_decode($server_output,true);
-												if ($server_output['status']) 
-												{
-												echo "$target [sukses]";
-												}
-												else{
-												echo"$target [gagal]";
-												}
-											}
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_setopt($ch, CURLOPT_FOLLOWLOCATION, true);
+						curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 0);
+						curl_setopt($ch, CURLOPT_SSL_VERIFYHOST, 0);
+						$server_output = curl_exec ($ch);
+						curl_close ($ch);				
+						$server_output = json_decode($server_output,true);
+						if ($server_output['status']) 
+						{
+						echo "$target [sukses]";
+						}
+						else{
+						echo"$target [gagal]";
+						}
+					}
 						
 ?>						
                                             
